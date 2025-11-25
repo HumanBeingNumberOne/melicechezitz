@@ -736,6 +736,15 @@ function initPlayer(gameContainer) {
         }
     });    
 
+    //This is supposed to be a cheat code, if you can optimize this, that would be quite nice.
+    /*
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'KeyH' && e.code === 'KeyA' && e.code === 'KeyC' && e.code === 'KeyK') {
+            toggleInvuln();
+        }
+    });
+    */
+    
     const gameInterval = setInterval(() => {
         updateGame(playerElement, gameContainer, gameInterval);
     }, 20);
@@ -1016,5 +1025,11 @@ function resetPlayer() {
     player.velocityY = 0;
     player.jumpCount = 0;
 }
+
+/* Still looking at this
+function toggleInvuln() {
+    
+}
+*/
 
 window.onload = initGame;
